@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+body {
+  background-image: url('Background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+h1 {
+  background-color:#800080;
+}
+h1 {text-align: center;}
+</style>
+
+<H1 style="font-family:'Courier New'"><p style="color:#FF7F50;">Speaker Test </p></H1>
+
+</body>
+</html>
+
+<html>
+<body>
+<head>
+<style>
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 400px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.butto {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 10px 50px 0 rgba(0,0,0,0.19);
+}
+
+</style>
+</head>
+
+<audio id="Left">
+  <source src="Audio/left.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="Right">
+  <source src="Audio/right.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="Both">
+  <source src="Audio/Full_song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="Full">
+  <source src="Audio/Other_tune.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+
+<button class="button" button onclick="playLeft()" type="button"><span>Play Left</span></button>
+<button class="button" button onclick="playBoth()" type="button"><span>Play Both</span></button>
+<button class="button" button onclick="playRight()" type="button"><span>Play Right</span></button>
+<p align=center><button onclick="pauseAudio()" type="button" class="butto  button2">Pause</button></p>
+
+
+<script>
+var a = document.getElementById("Left"); 
+var b = document.getElementById("Right"); 
+var c = document.getElementById("Both"); 
+
+
+function playRight() { 
+  c.pause();
+  a.pause();
+  b.play();
+}
+
+function playLeft() { 
+  c.pause();
+  b.pause();
+  a.play();
+} 
+
+function playBoth() { 
+  a.pause();
+  b.pause();
+  c.play();
+} 
+
+function pauseAudio() { 
+  a.pause(); 
+  b.pause();
+  c.pause();
+} 
+</script>
+<style>
+
+</style>
+<marquee behavior="scroll" direction="right" scrollamount="12">
+<H2 style="font-family:'Lucida Handwriting'"><p style="color:black;">Created By Deepish S</p></H2>
+</marquee>
+
+</body>
+
